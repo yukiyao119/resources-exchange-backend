@@ -1,0 +1,2 @@
+class UserSkillExchangesController < ApplicationController
+end
