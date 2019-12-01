@@ -7,24 +7,25 @@ class UserSkillsController < ApplicationController
 
     def show 
         user_skill = UserSkill.find(params[:id])
-        # if user_id_from_token == user_id.to_i
-        #     user = User.find(user_id) 
-        #     render json: user
-        # else 
-        #     render json: { wrong_token: true}, status: :unauthorized
-        # end
-        render json: user_skill, include: "**", status: 200
+        render json: { user_skill: UserSkillSerializer.new(user_skill) }, status: 200
     end
 
     def create
-        user_skill = UserSkill.create(skill_id: params[skill_id], user_id: params[user_id])
-        # if user.valid?
-        #     render json: {ok: true}
-        # else
-        #     render json: { errors: user.errors.full_messages } , status: :unprocessable_entity
-        # end 
-        render json: user_skill, include: "**", status: 200
+        user_skill = UserSkill.create(user_skill_params)
+            render json: { user_skill: UserSkillSerializer.new(user_skill) }, status: 200
     end
 
+    def destroy 
+        user_skill = UserSkill.find(params[:id])
+        user_skill.destroy
+        render json: user_skill
+    end
+
+
+    private
+
+    def user_skill_params
+        params.permit(:user_id, :skill_id)
+    end
 
 end

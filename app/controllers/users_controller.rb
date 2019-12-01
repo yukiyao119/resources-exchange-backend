@@ -2,13 +2,12 @@ class UsersController < ApplicationController
     # skip_before_action :authorized, only: [:create, :index]
     
     def index
-        @users = User.all
-        render json: @users, include: "**", status: 200
+        users = User.all
+        render json: users, include: "**", status: 200
     end
 
     def profile
-        # debugger
-        render json: current_user, include: "**", status: :accepted
+        render json: {token: token, user: UserSerializer.new(current_user) } , status: :accepted
     end
 
     def create
@@ -17,7 +16,7 @@ class UsersController < ApplicationController
         # user_id = user.id
         if user.valid?
             token = create_token({user_id: user.id})
-            render json: { user: user, jwt: token}, status: :created
+            render json: { token: token, user: user, include: "**" }, status: :created
         else
             render json: { errors: user.errors.full_messages } , status: :unprocessable_entity
         end 
@@ -40,7 +39,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password, :displayname, :donated_hour, :time_slot, :location, :img, :bio)
+        params.permit(:username, :password, :displayname, :donated_hour, :time_slot, :location, :img, :bio)
     end
     
 end

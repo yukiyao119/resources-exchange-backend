@@ -5,14 +5,20 @@ class ApplicationController < ActionController::API
       JWT.encode(payload, signing_secret, 'HS256')
     end
 
-
     def auth_header
       request.headers["Authorization"]
     end
+
+    def token 
+      if auth_header
+        auth_header.split(' ')[1]
+      end 
+    end
   
     def decoded_token
-      if auth_header
-        token = auth_header.split(' ')[1]
+      # if auth_header
+      if token
+        # token = auth_header.split(' ')[1]
         # header: { 'Authorization': 'Bearer <token>' }
         begin
           JWT.decode(token, signing_secret, true, algorithm: 'HS256')
@@ -42,34 +48,6 @@ class ApplicationController < ActionController::API
       Rails.application.credentials.jwt_my_secret
     end
 
-
-    # private
-
-    # def create_token(user_id)
-    #   JWT.encode({ user_id: user_id }, signing_secret, 'HS256')
-    # end
-
-    # def user_id_from_token
-    #   begin
-    #     token = request.headers["Authorization"]
-    #     decoded_token = JWT.decode(token, signing_secret, true, { algorithm: 'HS256' })
-    #     return decoded_token.first["user_id"] 
-    #   rescue 
-    #     return nil
-    #   end
-    # end
-  
-    # def token_is_valid
-    #   user_id_from_token != nil
-    # end
-
-    # def current_user
-    #     User.find(user_id_from_token)
-    # end
-  
-    # def signing_secret
-    #   ENV["YUKI_JWT_SECRET_KEY"]
-    # end
 
 
 end
