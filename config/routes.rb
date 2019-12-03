@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   # resources :user_skill_exchanges
   resources :exchanges
   resources :user_skills

@@ -1,6 +1,8 @@
 class ExchangeSerializer < ActiveModel::Serializer
   attributes :id, :time, :location, :description, :exchanger, :exchangee
 
+  has_many :reviews
+
   def exchanger
     {
       user: object.exchanger.user,
@@ -14,5 +16,6 @@ class ExchangeSerializer < ActiveModel::Serializer
       skill: object.exchangee.skill.name
     }
   end
+
 
 end

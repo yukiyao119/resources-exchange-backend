@@ -12,7 +12,11 @@ class UserSkillsController < ApplicationController
 
     def create
         user_skill = UserSkill.create(user_skill_params)
+        if user_skill.valid? 
             render json: { user_skill: UserSkillSerializer.new(user_skill) }, status: 200
+        else
+            render json: { errors: user_skill.errors.full_messages } , status: :unprocessable_entity
+        end 
     end
 
     def destroy 

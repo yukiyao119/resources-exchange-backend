@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         # user_id = user.id
         if user.valid?
             token = create_token({user_id: user.id})
-            render json: { token: token, user: user, include: "**" }, status: :created
+            render json: { token: token, user: UserSerializer.new(user)}, status: :created
         else
             render json: { errors: user.errors.full_messages } , status: :unprocessable_entity
         end 
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     def update
         user = User.find(params[:id])
         user.update(user_params)
-        render json: user, include: "**", status: 200
+        render json: { user: UserSerializer.new(user)}, status: 200
     end
 
     def destroy
