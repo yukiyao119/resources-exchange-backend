@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_142934) do
     t.string "location"
     t.string "img"
     t.string "bio"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

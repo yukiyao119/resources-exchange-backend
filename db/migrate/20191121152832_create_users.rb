@@ -9,7 +9,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :location
       t.string :img
       t.string :bio
-
+      t.float :lat
+      t.float :lng
       t.timestamps
     end
   end

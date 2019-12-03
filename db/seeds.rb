@@ -22,13 +22,17 @@ skill6 = Skill.create(name: "Yoga")
 skill7 = Skill.create(name: "Acting")
 skill8 = Skill.create(name: "Massage")
 
-user1 = User.create(username: "yukiyao", password: "111", displayname: "Yuki", donated_hour: 2, time_slot: "weekend", location: "Prospect park", img: "www.google.com", bio: 'first bio')
+# user Yuki, prospect park
+user1 = User.create(username: "yukiyao", password: "111", displayname: "Yuki", donated_hour: 2, time_slot: "weekend", location: "Prospect park", img: "https://www.pinterest.com/pin/33988172171833984/", bio: 'first bio', lat: 40.663610, lng: -73.977640)
 
-user2 = User.create(username: "dangrammer", password: "111", displayname: "Dan", donated_hour: 2, time_slot: "Thursday", location: "Williamsburg", img: "www.google.com", bio: "Who's param?")
+# user dan, Williamsburg
+user2 = User.create(username: "dangrammer", password: "111", displayname: "Dan", donated_hour: 2, time_slot: "Thursday", location: "Williamsburg", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "Who's param?", lat: 40.692532, lng: -73.990997)
 
-user3 = User.create(username: "alex", password: "111", displayname: "Alex", donated_hour: 3, time_slot: "Friday", location: "Harlem", img: "www.google.com", bio: 'I bike everyday!')
+# user alex, harlem
+user3 = User.create(username: "alex", password: "111", displayname: "Alex", donated_hour: 3, time_slot: "Friday", location: "Harlem", img: "https://www.pinterest.com/pin/33988172171833984/", bio: 'I bike everyday!', lat: 40.813511, lng: -73.961418)
 
-user4 = User.create(username: "benny", password: "111", displayname: "Benny", donated_hour: 1, time_slot: "Monday", location: "Online", img: "www.google.com", bio: "I'm currently living in Tokyo. I also write poems!")
+# user benny, tokyo
+user4 = User.create(username: "benny", password: "111", displayname: "Benny", donated_hour: 1, time_slot: "Monday", location: "Online", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "I'm currently living in Tokyo. I also write poems!", lat: 35.689487, lng: 139.691711)
 
 # yuki's skills Mandarin & Photo
 user1skill1 = UserSkill.create(skill_id: skill3.id, user_id: user1.id)
