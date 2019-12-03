@@ -1,0 +1,8 @@
+routes mount
+rails g channel
+channel.rb, unsubscribe, raise 
+ActionCable server 
+
+chatChannel
+subscribe 
+stream_for message
