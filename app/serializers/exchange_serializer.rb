@@ -2,6 +2,7 @@ class ExchangeSerializer < ActiveModel::Serializer
   attributes :id, :time, :location, :description, :exchanger, :exchangee
 
   has_many :reviews
+  has_many :messages
 
   def exchanger
     {

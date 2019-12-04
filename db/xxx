@@ -6,3 +6,9 @@ ActionCable server
 chatChannel
 subscribe 
 stream_for message
+
+rails g channel messages
+stream_for exchange
+
+message controller 
+create => MessagesChannel.broadcast_to(exchange, Exchagne)
