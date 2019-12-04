@@ -20,7 +20,10 @@ class MessagesController < ApplicationController
         #     user: message.user.username
         #   head :ok
             MessagesChannel.broadcast_to(exchange, ExchangeSerializer.new(exchange))
+        else
+            render json: { errors: message.errors.full_messages } , status: :unprocessable_entity
         end
+        
       end
 
 
