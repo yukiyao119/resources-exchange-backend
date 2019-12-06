@@ -34,6 +34,8 @@ user3 = User.create(username: "alex", password: "111", displayname: "Alex", dona
 # user benny, tokyo
 user4 = User.create(username: "benny", password: "111", displayname: "Benny", donated_hour: 1, time_slot: "Monday", location: "Online", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "I'm currently living in Tokyo. I also write poems!", lat: 35.689487, lng: 139.691711)
 
+user5 = User.create(username: "lisa", password: "111", displayname: "Lisa", donated_hour: 3, time_slot: "Tuesday", location: "Queens", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "I use React-Semantic-UI", lat: 40.728226, lng: -73.794853)
+
 # yuki's skills Mandarin & Photo
 user1skill1 = UserSkill.create(skill_id: skill3.id, user_id: user1.id)
 user1skill2 = UserSkill.create(skill_id: skill4.id, user_id: user1.id)

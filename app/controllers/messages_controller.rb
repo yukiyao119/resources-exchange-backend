@@ -19,7 +19,9 @@ class MessagesController < ApplicationController
         #     message: message.content,
         #     user: message.user.username
         #   head :ok
-            MessagesChannel.broadcast_to(exchange, ExchangeSerializer.new(exchange))
+            ActionCable.server.broadcast(exchange, ExchangeSerializer.new(exchange))
+            # MessagesChannel.broadcast_to(exchange, ExchangeSerializer.new(exchange))
+            # render json: message
         else
             render json: { errors: message.errors.full_messages } , status: :unprocessable_entity
         end
