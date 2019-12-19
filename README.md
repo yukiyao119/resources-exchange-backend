@@ -22,6 +22,7 @@ demo tbc
 ###### Built with
 - Rails API
 - ActiveModel::Serializer
+- bcrypt-ruby
 
 
 
