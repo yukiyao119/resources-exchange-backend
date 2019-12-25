@@ -21,6 +21,14 @@ skill5 = Skill.create(name: "React")
 skill6 = Skill.create(name: "Yoga")
 skill7 = Skill.create(name: "Acting")
 skill8 = Skill.create(name: "Massage")
+skill9 = Skill.create(name: "Spanish")
+skill10 = Skill.create(name: "Drawing")
+skill11 = Skill.create(name: "Meditation")
+skill12 = Skill.create(name: "Piano")
+skill13 = Skill.create(name: "Singing")
+skill14 = Skill.create(name: "Soccer")
+skill15 = Skill.create(name: "Guitar")
+skill16 = Skill.create(name: "Cooking")
 
 # user Yuki, prospect park
 user1 = User.create(username: "yukiyao", password: "111", displayname: "Yuki", donated_hour: 2, time_slot: "weekend", location: "Prospect park", img: "https://www.pinterest.com/pin/33988172171833984/", bio: 'first bio', lat: 40.663610, lng: -73.977640)
@@ -34,7 +42,18 @@ user3 = User.create(username: "alex", password: "111", displayname: "Alex", dona
 # user benny, tokyo
 user4 = User.create(username: "benny", password: "111", displayname: "Benny", donated_hour: 1, time_slot: "Monday", location: "Online", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "I'm currently living in Tokyo. I also write poems!", lat: 35.689487, lng: 139.691711)
 
-user5 = User.create(username: "lisa", password: "111", displayname: "Lisa", donated_hour: 3, time_slot: "Tuesday", location: "Queens", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "I use React-Semantic-UI", lat: 40.728226, lng: -73.794853)
+# user lisa, Queens
+user5 = User.create(username: "lisa", password: "111", displayname: "Lisa", donated_hour: 3, time_slot: "Tuesday", location: "Queens", img: "https://www.pinterest.com/pin/33988172171833984/", bio: "I use React-Semantic-UI", lat: 40.743720, lng: -73.822030)
+
+# user david, Portland 
+user6 = User.create(username: "davidbassclark", password: "111", displayname: "David", donated_hour: 4, time_slot: "weekend", location: "Portland ME", img: "https://www.pinterest.com/pin/33988172171833984/", bio: 'Mainer', lat: 43.659222, lng: -70.256523)
+
+# user jeff, Hell's Kitchen
+user7 = User.create(username: "jeff", password: "111", displayname: "Jeff", donated_hour: 1, time_slot: "Weekday after work", location: "Hell's Kitchen", img: "https://www.pinterest.com/pin/33988172171833984/", bio: 'I love soccer!', lat: 40.768195, lng: -73.992017)
+
+# user Irina, Hell's Kitchen
+user8 = User.create(username: "irena", password: "111", displayname: "Irena", donated_hour: 2, time_slot: "Flexible", location: "Hell's Kitchen", img: "https://www.pinterest.com/pin/33988172171833984/", bio: 'I live a healthy lifestyle! I cook a lot!', lat: 40.762195, lng: -73.996015)
+
 
 # yuki's skills Mandarin & Photo
 user1skill1 = UserSkill.create(skill_id: skill3.id, user_id: user1.id)
@@ -47,6 +66,16 @@ user2skill2 = UserSkill.create(skill_id: skill2.id, user_id: user2.id)
 user3skill1 = UserSkill.create(skill_id: skill1.id, user_id: user3.id)
 # benny's skills Javascript
 user4skill1 = UserSkill.create(skill_id: skill1.id, user_id: user4.id)
+# lisa's skills Spanish
+user5skill9 = UserSkill.create(skill_id: skill9.id, user_id: user5.id)
+
+
+# david's skills Guitar
+user6skill15 = UserSkill.create(skill_id: skill15.id, user_id: user6.id)
+# jeff's skills Soccer
+user7skill14 = UserSkill.create(skill_id: skill14.id, user_id: user7.id)
+# irena's skills Cooking
+user8skill16 = UserSkill.create(skill_id: skill16.id, user_id: user8.id)
 
 
 # Exchange time format 2019-11-21 17:15:22
