@@ -58,24 +58,43 @@ user8 = User.create(username: "irena", password: "111", displayname: "Irena", do
 # yuki's skills Mandarin & Photo
 user1skill1 = UserSkill.create(skill_id: skill3.id, user_id: user1.id)
 user1skill2 = UserSkill.create(skill_id: skill4.id, user_id: user1.id)
-# dan's skills Javascript & Drum
+# dan's skills Javascript & Drum React
 user2skill1 = UserSkill.create(skill_id: skill1.id, user_id: user2.id)
 user2skill2 = UserSkill.create(skill_id: skill2.id, user_id: user2.id)
+user2skill5 = UserSkill.create(skill_id: skill5.id, user_id: user2.id)
 
-# alex's skills Javascript
+# alex's skills Javascript Soccer Spanish
 user3skill1 = UserSkill.create(skill_id: skill1.id, user_id: user3.id)
-# benny's skills Javascript
+user3skill14 = UserSkill.create(skill_id: skill14.id, user_id: user3.id)
+user3skill9 = UserSkill.create(skill_id: skill9.id, user_id: user3.id)
+
+
+# benny's skills Javascript Drawing
 user4skill1 = UserSkill.create(skill_id: skill1.id, user_id: user4.id)
-# lisa's skills Spanish
+user4skill10 = UserSkill.create(skill_id: skill10.id, user_id: user4.id)
+user4skill5 = UserSkill.create(skill_id: skill5.id, user_id: user4.id)
+
+# lisa's skills Spanish Meditation Singing
 user5skill9 = UserSkill.create(skill_id: skill9.id, user_id: user5.id)
+user5skill11 = UserSkill.create(skill_id: skill11.id, user_id: user5.id)
+user5skill13 = UserSkill.create(skill_id: skill13.id, user_id: user5.id)
+user5skill5 = UserSkill.create(skill_id: skill5.id, user_id: user5.id)
 
-
-# david's skills Guitar
+# david's skills Guitar & Acting, Singing
 user6skill15 = UserSkill.create(skill_id: skill15.id, user_id: user6.id)
-# jeff's skills Soccer
+user6skill7 = UserSkill.create(skill_id: skill7.id, user_id: user6.id)
+user6skill13 = UserSkill.create(skill_id: skill13.id, user_id: user6.id)
+
+
+# jeff's skills Soccer Drum Photo
 user7skill14 = UserSkill.create(skill_id: skill14.id, user_id: user7.id)
-# irena's skills Cooking
+user7skill2 = UserSkill.create(skill_id: skill2.id, user_id: user7.id)
+user7skill4 = UserSkill.create(skill_id: skill4.id, user_id: user7.id)
+
+# irena's skills Cooking Acting Massage
 user8skill16 = UserSkill.create(skill_id: skill16.id, user_id: user8.id)
+user8skill7 = UserSkill.create(skill_id: skill7.id, user_id: user8.id)
+user8skill8 = UserSkill.create(skill_id: skill8.id, user_id: user8.id)
 
 
 # Exchange time format 2019-11-21 17:15:22
