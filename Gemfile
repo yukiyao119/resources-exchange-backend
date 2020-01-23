@@ -4,6 +4,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # gem 'dotenv-rails', groups: [:development, :test]
 
 ruby '2.6.1'
+gem 'rest-client'
+
+group :development, :test, :production do
+  gem 'dotenv-rails'
+  gem 'rspec-rails'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
@@ -17,6 +23,8 @@ gem 'puma', '~> 4.1'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+gem "jwt", "~> 2.2"
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
@@ -34,7 +42,6 @@ gem 'activerecord_reset_pk_sequence'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # gem 'dotenv-rails'
 end
 
 group :development do
@@ -47,6 +54,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "jwt", "~> 2.2"
 
 # gem "dotenv-rails", "~> 2.7"
