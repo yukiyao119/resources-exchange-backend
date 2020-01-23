@@ -7,7 +7,12 @@ class UsersController < ApplicationController
     end
 
     def profile
-        render json: {token: token, user: UserSerializer.new(current_user) } , status: :accepted
+        # user = User.find(params[:id])
+        if current_user
+            render json: {token: token, user: UserSerializer.new(current_user) } , status: :accepted
+        else 
+            render json: { message: 'Please log in' }
+        end 
     end
 
     def create
