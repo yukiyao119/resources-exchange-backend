@@ -79,3 +79,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 
+production:
+<<: *default
+adapter: postgresql
+database: Resources_exchange_production
+username: Resources_exchange
+password: <%= ENV['RESOURCES_EXCHANGE_DATABASE_PASSWORD'] %>
