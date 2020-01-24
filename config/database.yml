@@ -81,6 +81,6 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   # username: Resources_exchange
   # password: <%= ENV['RESOURCES_EXCHANGE_DATABASE_PASSWORD'] %>
