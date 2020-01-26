@@ -207,7 +207,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers (~> 0.10.0)
+  active_model_serializers (~> 0.10.10)
   activerecord_reset_pk_sequence
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
