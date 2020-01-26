@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'auth#login'
+
   resources :messages
   resources :reviews
   # resources :user_skill_exchanges
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#login'
   get '/profile', to: 'users#profile'
   # post '/signup', to: 'users#create'
+
+  match '*_missing_page', to: 'users#profile', via: :get
 
   mount ActionCable.server => '/cable'
 
