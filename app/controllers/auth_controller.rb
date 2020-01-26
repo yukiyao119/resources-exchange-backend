@@ -14,7 +14,7 @@ class AuthController < ApplicationController
             # }, status: :accepted
             # json: @customers, :include => [:address, :subscription]
         else
-            render json: { errors: [ "That didn't match any users WE know about 💁" ] }, status: :unprocessable_entity
+            render json: { errors: [ "That didn't match any users WE know about 💁, Please try again" ] }, status: :unprocessable_entity
         end
 
     end 

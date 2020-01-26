@@ -8,11 +8,11 @@ class UsersController < ApplicationController
 
     def profile
         # user = User.find(params[:id])
-        if current_user
+        # if current_user
             render json: {token: token, user: UserSerializer.new(current_user) } , status: :accepted
-        else 
-            render json: { message: 'Please log in' }
-        end 
+        # else 
+        #     render json: { message: 'Please log in' }
+        # end 
     end
 
     def create
