@@ -44,8 +44,8 @@ class ApplicationController < ActionController::API
     # end
 
     def signing_secret
-      # ENV['jwt_my_secret']
-      Rails.application.credentials.secret_key_base
+      ENV['JWT_SECRET']
+      # Rails.application.credentials.secret_key_base
     end
 
 
