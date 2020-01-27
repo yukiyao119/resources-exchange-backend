@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root 'auth#login'
+  root 'auth#login'
 
   resources :messages
   resources :reviews
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#profile'
   # post '/signup', to: 'users#create'
 
-  # match '*_missing_page', to: 'users#profile', via: :get
+  match '*_missing_page', to: 'auth#login', via: :get
 
   mount ActionCable.server => '/cable'
 
