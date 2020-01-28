@@ -79,8 +79,13 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 
-production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+# production:
+#   <<: *default
+#   url: <%= ENV['DATABASE_URL'] %>
   # username: Resources_exchange
   # password: <%= ENV['RESOURCES_EXCHANGE_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: Resources_exchange_production
+  username: Resources_exchange
+  password: <%= ENV['RESOURCES_EXCHANGE_DATABASE_PASSWORD'] %>
