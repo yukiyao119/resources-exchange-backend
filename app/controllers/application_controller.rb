@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::API
     # before_action :authorized
 
+    def fallback_index_html
+      render :file => 'public/index.html'
+    end
+
+    
     def create_token(payload)
       JWT.encode(payload, signing_secret, 'HS256')
     end
