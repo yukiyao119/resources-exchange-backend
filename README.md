@@ -21,6 +21,10 @@ https://youtu.be/ai8NupwpBpI
 ## Gif Demo
 ![gifOfHomePage](https://media.giphy.com/media/RetaglnTYHGTFe51nn/giphy.gif)
 ![gifOfBrowseAndSearch](https://media.giphy.com/media/SsT3ssSdgnRoZ56Flk/giphy.gif)
+![gifOfFindOwners](https://media.giphy.com/media/XyJpDBbKLFiGWCVVAo/giphy.gif)
+![gifOfRequest](https://media.giphy.com/media/kdX2cvAe86zYBgNevG/giphy.gif)
+![gifOfEditInfo](https://media.giphy.com/media/hvH8fU8A3z4o5rPkLS/giphy.gif)
+![gifOfExchanges](https://media.giphy.com/media/ibpMIQFJNbFZMO3a2N/giphy.gif)
 
 
 
