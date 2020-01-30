@@ -1,6 +1,8 @@
 # Resources Xchange
 
-A platform that helps people all over the world to learn skills in a new way. :earth_americas: You can find skill owners and their skills to have an exchange with yours. :boom:
+It is a platform that introduces a new way of learning skills. :earth_americas: You can find skills that you are interested in and request a learning exchange with your current skills. :boom:
+
+This website allows you to browse and search skills, find skill-owners around you, request Xchange sessions and review your learning experience.
 
 
 
@@ -10,9 +12,15 @@ The original ideal was inspired by the resources exchange or barters exsisted in
 
 
 
-## Demo
+## Video Demo
 
-https://youtu.be/Q9L_S-hlYSw
+https://youtu.be/ai8NupwpBpI
+
+
+
+## Gif Demo
+![gifOfHomePage](https://media.giphy.com/media/RetaglnTYHGTFe51nn/giphy.gif)
+![gifOfBrowseAndSearch](https://media.giphy.com/media/SsT3ssSdgnRoZ56Flk/giphy.gif)
 
 
 
