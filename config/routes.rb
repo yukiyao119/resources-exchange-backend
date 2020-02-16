@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :messages
   resources :reviews
-  # resources :user_skill_exchanges
   resources :exchanges
   resources :user_skills
   resources :skills
@@ -16,7 +15,7 @@ Rails.application.routes.draw do
   # match '*_missing_page', to: 'users#profile', via: :get
 
 
-  mount ActionCable.server => '/cable'
+  # mount ActionCable.server => '/cable'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
