@@ -8,6 +8,8 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins '*'
+    # 'https://naughty-bhabha-f00715.netlify.com/'
+    # , 'YOUR-CUSTOM-DOMAIN'
 
     resource '*',
       headers: :any,
